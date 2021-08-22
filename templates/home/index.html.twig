@@ -10,7 +10,7 @@
     {% for article in articles %}
         <div class="card ol-md-4" style="width: 18rem;">
         <p class="date">Ecrit le {{ article.createdAt | date("d/m/Y)") }}</p>
-        <img src="{{ article.image }}" class="card-img-top" alt="{{ article.title }}">
+        <img src="/assets/images/articles/{{ article.image }}" class="card-img-top" alt="{{ article.title }}">
         <div class="card-body">
             <h5 class="card-title">{{ article.title }}</h5>
             <a href="{{ path('show', {'id':article.id}) }}" class="btn btn-primary">En savoir plus</a>

@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -58,6 +59,7 @@ class User
     public function __construct()
     {
         $this->articles = new ArrayCollection();
+        $this->createdAt = new DateTime();
     }
 
     public function getId(): ?int
@@ -165,5 +167,10 @@ class User
         }
 
         return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->firstname . ' ' . $this->lastname;
     }
 }
