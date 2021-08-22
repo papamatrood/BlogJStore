@@ -16,6 +16,7 @@
         "symfony/maker-bundle": "^1.33",
         "symfony/orm-pack": "^2.1",
         "symfony/runtime": "5.3.*",
+        "symfony/twig-pack": "^1.0",
         "symfony/yaml": "5.3.*"
     },
     "config": {
